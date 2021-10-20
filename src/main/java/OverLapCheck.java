@@ -5,7 +5,6 @@ public class OverLapCheck {
 
     public Boolean isOverLapping(Rectangle firstRect, Rectangle secondRect){
 
-
         HashMap<String, Integer> rectangleOnePoints = new HashMap<>();
         HashMap<String, Integer> rectangleTwoPoints = new HashMap<>();
 

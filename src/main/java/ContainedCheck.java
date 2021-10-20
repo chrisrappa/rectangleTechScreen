@@ -18,17 +18,33 @@ public class ContainedCheck {
         rectangleTwoPoints.put("y2", secondRect.cornerTwo[1]);
 
 
-        int rect1Area = (rectangleOnePoints.get("x2") - rectangleOnePoints.get("x1")) * (rectangleOnePoints.get("y2") - rectangleOnePoints.get("y1"));
-        int rect2Area = (rectangleTwoPoints.get("y2") - rectangleTwoPoints.get("y1")) * (rectangleTwoPoints.get("x2") - rectangleTwoPoints.get("x1"));
+        int rect1Area = (rectangleOnePoints.get("x2") - rectangleOnePoints.get("x1")) *
+                        (rectangleOnePoints.get("y2") - rectangleOnePoints.get("y1"));
 
-        int rect1PointsAdded = rectangleOnePoints.get("x1") + rectangleOnePoints.get("y1") + rectangleOnePoints.get("x2") + rectangleOnePoints.get("y2");
-        int rect2PointsAdded = rectangleTwoPoints.get("x1") + rectangleTwoPoints.get("y1") + rectangleTwoPoints.get("x2") + rectangleTwoPoints.get("y2");
+        int rect2Area = (rectangleTwoPoints.get("y2") - rectangleTwoPoints.get("y1")) *
+                        (rectangleTwoPoints.get("x2") - rectangleTwoPoints.get("x1"));
 
-        if(rect1PointsAdded >= rect2PointsAdded && rect2Area < rect1Area && rectangleOnePoints.get("x1") < rectangleTwoPoints.get("x1")){
+        int rect1PointsAdded =  rectangleOnePoints.get("x1") +
+                                rectangleOnePoints.get("y1") +
+                                rectangleOnePoints.get("x2") +
+                                rectangleOnePoints.get("y2");
+
+        int rect2PointsAdded =  rectangleTwoPoints.get("x1") +
+                                rectangleTwoPoints.get("y1") +
+                                rectangleTwoPoints.get("x2") +
+                                rectangleTwoPoints.get("y2");
+
+        if  (rect1PointsAdded >= rect2PointsAdded &&
+            rect2Area < rect1Area &&
+            rectangleOnePoints.get("x1") < rectangleTwoPoints.get("x1")){
+
             return true;
         }
 
-        if(rect2PointsAdded >= rect1PointsAdded  && rect1Area < rect2Area && rectangleOnePoints.get("x1") > rectangleTwoPoints.get("x1")){
+        if  (rect2PointsAdded >= rect1PointsAdded  &&
+            rect1Area < rect2Area &&
+            rectangleOnePoints.get("x1") > rectangleTwoPoints.get("x1")){
+
             return true;
         }
 
