@@ -23,7 +23,7 @@ public class Main {
                 System.out.println("One of the rectangles is inside the other one");
                 break;
             default:
-                System.out.println("Something went wrong, did you put in both rectangles?");
+                System.out.println("The rectangles are completely separate from each other");
         }
 
 
