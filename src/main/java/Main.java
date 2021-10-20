@@ -4,8 +4,8 @@ public class Main {
 
     public static void main(String [] args){
 
-        Rectangle rect1 = new Rectangle(new int[]{1, 1}, new int[]{3, 3});
-        Rectangle rect2 = new Rectangle(new int[]{1, 1}, new int[]{15, 3});
+        Rectangle rect1 = new Rectangle(new int[]{5, 1}, new int[]{10, 5});
+        Rectangle rect2 = new Rectangle(new int[]{5, 1}, new int[]{1, 5});
         OverLapCheck overLapCheck = new OverLapCheck();
         ContainedCheck containedCheck = new ContainedCheck();
         AdjacentCheck adjacentCheck = new AdjacentCheck();
