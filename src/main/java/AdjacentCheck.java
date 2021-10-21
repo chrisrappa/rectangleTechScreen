@@ -18,10 +18,19 @@ public class AdjacentCheck {
         rectangleTwoPoints.put("y2", secondRect.cornerTwo[1]);
 
 
-        int rect1Height = rectangleOnePoints.get("y2") - rectangleOnePoints.get("y1");
-        int rect1Width = rectangleOnePoints.get("x2") - rectangleOnePoints.get("x1");
-        int rect2Height = rectangleTwoPoints.get("y2") - rectangleTwoPoints.get("y1");
-        int rect2Width = rectangleTwoPoints.get("x2") - rectangleTwoPoints.get("x1");
+        if (rectangleOnePoints.get("x2") == rectangleTwoPoints.get("x1")
+        || rectangleOnePoints.get("y2") == rectangleTwoPoints.get("y1")
+        || rectangleOnePoints.get("y1") == rectangleTwoPoints.get("y2")
+        || rectangleOnePoints.get("x1") == rectangleTwoPoints.get("x2")
+        && (
+        rectangleTwoPoints.get("y2") >= rectangleOnePoints.get("y1")
+        && rectangleTwoPoints.get("y1") <= rectangleOnePoints.get("y2")
+        && rectangleTwoPoints.get("x2") >= rectangleOnePoints.get("x1")
+        && rectangleTwoPoints.get("x1") <= rectangleOnePoints.get("x2")
+        )){
+            return true;
+        }
+
 
         return false;
 
