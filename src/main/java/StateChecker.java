@@ -3,8 +3,8 @@ public class StateChecker {
     private final OverLapCheck overLapCheck;
     private final ContainedCheck containedCheck;
     private final AdjacentCheck adjacentCheck;
-    private Rectangle rect1;
-    private Rectangle rect2;
+    private final Rectangle rect1;
+    private final Rectangle rect2;
 
     public StateChecker(OverLapCheck overLapCheck,
                         ContainedCheck containedCheck,

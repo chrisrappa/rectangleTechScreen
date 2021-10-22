@@ -1,5 +1,4 @@
 import java.io.IOException;
-import java.util.Objects;
 
 public class Main {
 
@@ -25,5 +24,8 @@ public class Main {
             default:
                 System.out.println("The rectangles are completely separate from each other");
         }
+
     }
+
+
 }
